@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class InputController {
 	
 	@GetMapping("/input")
-	public String getInput() {
+	public String getInput(@RequestParam(name = "previous",required = false) String previous, Model model) {
+		if (previous != null) {
+			model.addAttribute("previous", previous);
+		}
 		return "input";
 	}
 	
@@ -21,5 +24,7 @@ public class InputController {
 		return "output";
 		
 	}
+	
+	
 
 }
