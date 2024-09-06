@@ -7,6 +7,6 @@
     <h1 th:text="#{content.title}">Thymeleaf Page</h1>
 	<h2 th:text="#{content.outputpage}"></h2>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-	<p><a th:href="@{/input(previous=${param.val[0]})}">入力画面へ戻る</a></p>
+	<p><a th:href="@{/input(previous=${param.val[0]})}" th:text="#{content.backtoinput}"></a></p>
 </body>
 </html>
