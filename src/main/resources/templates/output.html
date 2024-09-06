@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Thymeleaf no Kadai</title>
 <body>
-    <h1>Thymeleaf課題</h1>
-	<h2>出力画面</h2>
+    <h1 th:text="#{content.title}">Thymeleaf Page</h1>
+	<h2 th:text="#{content.outputpage}"></h2>
     <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
 	<p><a th:href="@{/input(previous=${param.val[0]})}">入力画面へ戻る</a></p>
 </body>
